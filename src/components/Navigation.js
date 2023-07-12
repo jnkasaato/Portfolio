@@ -2,14 +2,6 @@
 import '../App.css';
 import jk from '../assets/jk.png'
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-    });
-  });
-});
 
 function Navigation() { 
 return (
