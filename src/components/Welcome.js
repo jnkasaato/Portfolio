@@ -7,7 +7,7 @@ return (
   <div className = 'Welcome'>
  
     <h1>HELLO </h1>
-    <h2>I'm Jordana Namutebi Kasaato, a developer <br/>living and exploring in Boston</h2> 
+    <h2>I'm Jordana, a developer <br/>living and exploring in Boston</h2> 
   </div>
     
   );
