@@ -8,6 +8,7 @@ return (
 <div className = "project"> 
   <div className = "project1" id = "dapp">
     <div className = "projects__info">
+      
       <h3><br/> Seedling</h3>
       <h4> SOLIDITY  -  ETHERS.JS  -  HARDHAT  -  REACT </h4>
       <h5>Seedling is a decentralized token exchange where you can transfer real world currency with
