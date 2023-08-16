@@ -15,7 +15,7 @@ body {
 :root {
   --black: #000000;
   --accent: #37519A;
-  --dark:#101D7F;
+  --dark:#1B0644;
   --background:#F2F0FA;
   --mainfont: 'Italiana', sans-serif;
   --secondaryfont:"Gill Sans";
@@ -59,7 +59,7 @@ h5{
 /*Navigation---------------------------------------------------------------------------*/
 .nav {
   display: grid;
-  grid-template-columns: auto 15% 10% 10% 10% 8%;
+  grid-template-columns: auto 15% 10% 10% 10% 10% 8%;
   align-items: center;
   max-width: 1500px;
   padding: 30px 0;
@@ -105,6 +105,20 @@ a:hover {
 }
 
 /*Projects---------------------------------------------------------------------------*/
+
+.project4 {
+  max-width: 1250px;
+  height: 550px;
+  background-color: #798789;
+  display: grid;
+  grid-template-columns:  auto 450px ;
+  align-items:center;
+  margin: 0 auto 50px;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  text-align: left;
+}
 
 .project1 {
   max-width: 1250px;
@@ -173,6 +187,13 @@ h6{
 
 }
 
+.projects__info2{
+  width: 450px;
+  height: 530px;
+  padding: 130px 30px;
+
+}
+
 .projects__buttons h1{
   padding:0 0 5px  0;
   cursor: pointer;
@@ -190,6 +211,12 @@ object-position: top;
 
 }
 
+.projects__img-planner img{
+object-fit: fill;
+
+
+}
+
 
 .projects__img1{
   cursor: pointer;
@@ -199,6 +226,17 @@ object-position: top;
 
 .root{
   padding: 0 20px 0;
+}
+
+.project-slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-slide-in.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*Contact ---------------------------------------------------------------------------*/

@@ -7,6 +7,9 @@ function Navigation({ scrolling }) {
   return (
     <div className={`nav ${scrolling ? 'scrolling' : ''}`}>
       <img src={jk} height="80px" alt="Logo" />
+      <Link to="finincial-planner" smooth={true} duration={1000} offset={-180}>
+        FINANCIAL PLANNER
+      </Link>
       <Link to="dapp" smooth={true} duration={1000} offset={-180}> 
         SEEDLING
       </Link>
