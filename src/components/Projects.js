@@ -1,112 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import '../App.css';
-import ecommerce from '../assets/ecommerce.jpg'
-import tokenexchange from '../assets/tokenexchange.jpg'
-import adopt from '../assets/adopt.jpg'
-import financialPlanner from '../assets/financial-planner.jpg'
+import finance from '../assets/finance.png';
+import tokenexchange from '../assets/tokenexchange.jpg';
+import adopt from '../assets/adopt.jpg';
+import ecommerce from '../assets/ecommerce.jpg';
+import github from '../assets/github.png';
+import site from '../assets/site.png';
+import myProjects from './MyProjects';
+import React, { useRef, useEffect } from 'react';
 
-function Projects() { 
-    const [isLoaded, setIsLoaded] = useState(false);
+function Projects() {
+  const project1DivRef = useRef(null);
+  const project2DivRef = useRef(null);
+  const project3DivRef = useRef(null);
+  const project4DivRef = useRef(null);
+  const projectsDivRef = useRef(null);
+
+  const applyFloatInAnimation = (divRef) => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        divRef.current.classList.add('float-in');
+      }
+    });
+
+    observer.observe(divRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  };
 
   useEffect(() => {
-    // Delay the animation to allow time for images to load
-    const timeout = setTimeout(() => {
-      setIsLoaded(true);
-    }, 500);
-
-    return () => clearTimeout(timeout);
+    applyFloatInAnimation(project1DivRef);
+    applyFloatInAnimation(project2DivRef);
+    applyFloatInAnimation(project3DivRef);
+    applyFloatInAnimation(project4DivRef);
+    applyFloatInAnimation(projectsDivRef);
+    
   }, []);
 
-  const projectsClassName = isLoaded ? 'project-slide-in active' : 'project-slide-in';
 
-return (
-<div className = "projects"> 
-  
-  <div className = "project2" id = "finincial-planner">
-    <div className = "projects__img-planner projects__img">
-      <a href="https://financialplanner.jordananamutebi.com" target="_blank"><img src = {financialPlanner} height= "550px" width ="800px"/></a>
-    </div>
-    <div className = "projects__info">
-      <h3><br/> Financial Planner </h3>
-      <h4> JAVASCRIPT  -  REACT </h4>
-      <h5>This application is a personal finance tracker  designed to help users manage their expenses
-       and savings. It offers features such as visualizing spending patterns, setting 
-       spending limits, and categorizing transactions to promote better financial planning."</h5>
-      <div className = "projects__buttons">
-        <a href="https://financialplanner.jordananamutebi.com" target="_blank"><h1 >VISIT> </h1></a>
-        <a href="https://github.com/jnkasaato/financial-planner" target="_blank"><h1>CODE> </h1></a>
-      </div>
-    </div>
-  </div>
-  <br/><br/><br/><br/><br/><br/>
-  <div className = "project1" id = "dapp">
-    <div className = "projects__info">
-      
-      <h3><br/> Seedling</h3>
-      <h4> SOLIDITY  -  ETHERS.JS  -  HARDHAT  -  REACT </h4>
-      <h5>Seedling is a decentralized token exchange where you can transfer real world currency with
-          a synthisized dApp token. You can deposit, withdraw, make and cancel orders, and access 
-          the ordering book all in one simple site.</h5>
-      <div className = "projects__buttons">
-        <a href="https://seedling.jordananamutebi.com" target="_blank"><h1 >VISIT> </h1></a>
-        <a href="https://github.com/jnkasaato/coin-exchange" target="_blank"><h1>CODE> </h1></a>
-      </div>
-    </div>
-    <div className = "projects__img">
-      <a href="https://seedling.jordananamutebi.com" target="_blank"><img src = {tokenexchange} height= "550px" width ="800px"/></a>
-    </div>
-  </div>
-  <br/><br/><br/><br/><br/><br/>
-
-  <div className = "project2" id = "adopt">
-    <div className = "projects__img">
-      <a href="https://happytail.jordananamutebi.com" target="_blank"><img src = {adopt} height= "550px" width ="800px"/></a>
-    </div>
-    <div className = "projects__info">
-      <h3><br/> HappyTail </h3>
-      <h4> JAVASCRIPT  -  REACT </h4>
-      <h5>HappyTail Pet Haven is a compassionate platform that facilitates pet adoptions, fosters 
-      loving connections between families and animals, and promotes responsible pet ownership, 
-      creating a brighter future for our furry companions.</h5>
-      <div className = "projects__buttons">
-        <a href="https://happytail.jordananamutebi.com" target="_blank"><h1 >VISIT> </h1></a>
-        <a href="https://github.com/jnkasaato/petAdoption" target="_blank"><h1>CODE> </h1></a>
-      </div>
-    </div>
-    
-  </div>
-  <br/><br/><br/><br/><br/><br/>
-  
-  <div className = "project3" id= "ecommerce">
-    <div className = "projects__info">
-      <h3><br/>Acclimate</h3>
-      <h4> SOLIDITY  -  ETHERS.JS  -  HARDHAT  -  REACT </h4>
-      <h5>Acclimate is a decentrlalized ecomerce site where you can explore and buy anything 
-          you want in the same way you would on a centralized platform. </h5>
-      <div className = "projects__buttons">          
-        <a href="https://acclimate.jordananamutebi.com" target="_blank"><h1 >VISIT></h1></a>
-        <a href="https://github.com/jnkasaato/ecommerce" target="_blank"><h1>CODE> </h1></a>
-      </div>
-    </div>  
-    <div className = "projects__img">
-      <a href="https://acclimate.jordananamutebi.com" target="_blank"><img src = {ecommerce} height= "550px" width ="800px"/></a>
-    </div>
-  </div>
-  <br/><br/><br/><br/><br/><br/>
+	const projects = myProjects.projects;
+	const project1 = projects.find(project => project.id === 1);
+	const project2 = projects.find(project => project.id === 2);
+	const project3 = projects.find(project => project.id === 3);
+	const project4 = projects.find(project => project.id === 4);
 
 
+	return (
+		<div className='projects '  >
+			<div  ref={projectsDivRef} className="relative rel-bottom floating-div" id="projects">
+				<h1>02.</h1>
+				<h4>Projects</h4>
+			</div>
 
-  </div>
+			<div ref={project1DivRef} className="project relative floating-div">
+				<div className="project-image relative">
+					<img src={finance} alt="finance" />
+					<div className="overlay project-cover">
+					</div>
+				</div>
+				<div className="project-info odd">
+					<h1>P.1</h1>
+					<h5>{project1.name}</h5>
+					<div className="info-box">
+						<p>{project1.description}</p>
+					</div>
+					<h1 className = "tech">{project1.tech}</h1>
+					<div className="my-links">
+						<a  href={project1.site} target="_blank" className="icons"><p>Live Demo ></p></a>
+						<a href={project1.code} target="_blank" className="icons"><p>Code ></p></a>
+					</div>
+				</div>
+			</div>
 
+			<div ref={project2DivRef} className="project relative floating-div">
+				<div className="project-image even-img relative ">
+					<img src={tokenexchange} alt="ecommerce" />
+					<div className="overlay project-cover">
+					</div>
+				</div>
+				<div className="project-info even">
+					<h1>P.2</h1>
+					<h5>{project2.name}</h5>
+					<div className="info-box">
+						<p>{project2.description}</p>
+					</div>
+					<h1 className = "tech">{project2.tech}</h1>
+					<div className="my-links">
+						<a href={project2.site} target="_blank" className="icons"><p>Live Demo ></p></a>
+						<a href={project2.code} target="_blank" className="icons"><p>Source Code ></p></a>
+					</div>
+				</div>
+			</div>
 
+			<div ref={project3DivRef} className="project relative floating-div">
+				<div className="project-image relative">
+					<img src={adopt} alt="portrait" />
+					<div className="overlay project-cover">
+					</div>
+				</div>
+				<div className="project-info odd">
+					<h1>P.3</h1>
+					<h5>{project3.name}</h5>
+					<div className="info-box">
+						<p>{project3.description}</p>
+					</div>
+					<h1 className = "tech">{project3.tech}</h1>
+					<div className="my-links">
+						<a  href={project3.site} target="_blank" className="icons"><p>Live Demo ></p></a>
+						<a href={project3.code} target="_blank" className="icons"><p>Source Code ></p></a>
+					</div>
+				</div>
+			</div>
 
+			<div ref={project4DivRef} className="project relative floating-div">
+				<div className="project-image relative even-img" >
+					<img src={ecommerce} alt="ecommerce" />
+					<div className="overlay project-cover">
+					</div>
+				</div>				<div className="project-info even">
+					<h1>P.4</h1>
+					<h5>{project4.name}</h5>
+					<div className="info-box">
+						<p>{project4.description}</p>
+					</div>
+					<h1 className = "tech">{project4.tech}</h1>
+					<div className="my-links">
+						<a href={project4.site} target="_blank" className="icons"><p>Live Demo ></p></a>
+						<a href={project4.code} target="_blank" className="icons"><p>Source Code ></p></a>
+					</div>
+				</div>
+			</div>
 
-  
-
-
-
-    
-  );
+		</div>
+	);
 }
 
 export default Projects;

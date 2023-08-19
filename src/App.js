@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-
-// Components
-import Navigation from './components/Navigation';
-import Welcome from './components/Welcome';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from './components/Navbar'
+import Welcome from './components/Welcome'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -24,11 +23,11 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Navigation scrolling={scrolling} />
-      <Welcome />
-      <Projects />
-      <Contact />
+    <div className='app'>
+      <Navbar scrolling={scrolling} />
+      <Welcome/>
+      <Projects/>
+      <Contact/>
     </div>
   );
 }

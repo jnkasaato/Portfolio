@@ -1,47 +1,101 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react';
+
 const Contact = () => {
-  const [formStatus, setFormStatus] = React.useState('Send')
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('Submitting...')
-    const { name, email, message } = e.target.elements
-    let conFom = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    }
-    console.log(conFom)
-  }
+  const welcomeDivRef = useRef(null);
+
+  const applyFloatInAnimation = (divRef) => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        divRef.current.classList.add('float-in');
+      }
+    });
+
+    observer.observe(divRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  };
+
+  useEffect(() => {
+    applyFloatInAnimation(welcomeDivRef);
+    
+  }, []);
+
+  const [Name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form data here
+    console.log('Form submitted:', {
+      Name,
+      email,
+      message,
+    });
+    // Reset form fields after submission
+    setName('');
+    setEmail('');
+    setMessage('');
+    // Set the isSubmitted state to true
+    setIsSubmitted(true);
+  };
+
   return (
-    <div className="contact" >
-    <div className="container mt-5" id="contact">
-      <h3 className="mb-3">Wanna say hi?</h3>
-      <h5><br/>Let's talk!</h5>
-      <form onSubmit={onSubmit}>
-        <div className = "contact__name-email">
-          <div className="mb-3">
-            <label className="form-label" htmlFor="name" ><h4>NAME</h4></label>
-            <input className="form-control"  placeholder=" Enter your name" type="text" id="name" required />
+    <div  className="contact"  style={{position:"relative"}}>
+          
+      <div id="contact"></div>
+      <div ref={welcomeDivRef} className="contact-container floating-div">
+        <h1>Say hi</h1>
+        <h2>Get In Touch</h2>
+        {isSubmitted ? (
+          <div className="sent-message">
+            <h4>Message Sent! Thanks for reaching out!</h4>
           </div>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="email"><h4>EMAIL ADDRESS</h4></label>
-            <input className="form-control"  placeholder=" Enter your email" type="email" id="email" required />
-          </div>
-        </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label className="contact-label"> Name:</label>
+              <input
+                type="text"
+                value={Name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="contact-input"
+              />
+            </div>
+            <div>
+              <label className="contact-label">Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="contact-input"
+              />
+            </div>
+            <div>
+              <label className="contact-label">Message:</label>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className="contact-textarea"
+              />
+            </div>
+            <button type="submit" className="contact-button">
+              Submit
+            </button>
+            
+          </form>
+        )}
 
-        <div className="mb-3">
-          <label className="form-label" htmlFor="message"><h4>MESSAGE</h4></label>
-          <textarea className="form-control" placeholder=" Enter your message" id="message" required /><br/><br/>
-        </div>
-
-        <button className="btn btn-danger" type="submit" id="submit">
-          SUBMIT
-        </button>
-
-      </form>
+      </div>
     </div>
-  </div>
+  );
+};
 
-  )
-}
-export default Contact
+export default Contact;
