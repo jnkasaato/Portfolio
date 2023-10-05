@@ -8,7 +8,7 @@ body, div, h1, h2, h3, h4, h5, ul, li, p {
 
 :root{
   --clr-white:#ffffff;
-  --clr-grey:#DDC3A5;
+  --clr-beige:#DDC3A5;
   --clr-background:#201E20;
   --clr-accent:#E0A96D;
   --clr-accent-aa:#E0A96D00;
@@ -30,7 +30,7 @@ h2{
 }
 
 h3{
-  color:var(--clr-grey);
+  color:var(--clr-beige);
   font-size: 3.5em;
   font-family: 'Poppins', sans-serif;
 }
@@ -48,7 +48,7 @@ h5{
 }
 
 p{
-  color:var(--clr-grey);
+  color:var(--clr-beige);
   font-size: 1em;
   width: 500px;
   line-height: 25px;
@@ -89,7 +89,7 @@ p{
 }
 
 .navbar__links h1:hover{
-  color: var(--clr-grey);
+  color: var(--clr-beige);
   cursor: pointer;
 }
 
@@ -178,7 +178,7 @@ padding: 300px;
 }
 .welcome p,
 .about-me p{
-  color:var(--clr-grey);
+  color:var(--clr-beige);
   font-size: 1em;
   width: 500px;
   padding: 30px 0;
@@ -203,7 +203,7 @@ padding: 300px;
 a,
 li{
   line-height: 25px;
-  color: var(--clr-grey);
+  color: var(--clr-beige);
    text-decoration: none;
 }
 
@@ -328,7 +328,7 @@ li{
 
 
 .tech {
-  color: var(--clr-grey);
+  color: var(--clr-beige);
   word-spacing: 20px;
 }
 

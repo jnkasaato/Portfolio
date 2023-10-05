@@ -1,4 +1,3 @@
-import portrait from '../assets/portrait.jpg';
 import React, { useRef, useEffect } from 'react';
 
 function Welcome() {

@@ -40,9 +40,10 @@ function Navbar({ scrolling }) {
           <h1>Contact</h1>
         </Link>
         <a
-          href="https://drive.google.com/file/d/1Hw8dOjuytsj-0GqYuf_7Xrf5D-CVQV8g/view?usp=share_link"
+          href="https://drive.google.com/file/d/1PbiqQQuFtBfRwyjOfo2c7sl3MUdzyr5k/view?usp=sharing"
           target="_blank"
           className="icons"
+          rel="noopener noreferrer"
         >
           <h1>Resume</h1>
         </a>
