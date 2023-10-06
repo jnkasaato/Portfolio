@@ -40,7 +40,7 @@ function Welcome() {
 				</div>
 				<div className="relative ">
 					<p>
-						Hello, I'm Jordana, a software developer based in Boston. With a a huge curiosity for solving intricate challenges, I thrive on crafting solutions that bridge the gap between complexity and user-centric design. My journey is defined by a relentless pursuit of knowledge, as I am committed to constant growth and evolution in the ever-evolving world of technology. With a diverse toolkit of programming languages and a knack for innovation, I'm on a mission to transform imaginative concepts into tangible, impactful applications.<br/><br/> Here are a few technologies I've been working with recently:
+						Hello, I'm Jordana, a software developer based in Boston. With a huge curiosity for solving intricate challenges, I thrive on crafting solutions that bridge the gap between complexity and user-centric design. My journey is defined by a relentless pursuit of knowledge, as I am committed to constant growth and evolution in the ever-evolving world of technology. With a diverse toolkit of programming languages and a knack for innovation, I'm on a mission to transform imaginative concepts into tangible, impactful applications.<br/><br/> Here are a few technologies I've been working with recently:
 					</p>
 				</div>
 				<div className="technologies relative">

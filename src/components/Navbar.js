@@ -40,7 +40,7 @@ function Navbar({ scrolling }) {
           <h1>Contact</h1>
         </Link>
         <a
-          href="https://drive.google.com/file/d/1PbiqQQuFtBfRwyjOfo2c7sl3MUdzyr5k/view?usp=sharing"
+          href="https://drive.google.com/file/d/1I_alJc18fl4Cg_34raEZbl6BUMeuFFLv/view?usp=sharing"
           target="_blank"
           className="icons"
           rel="noopener noreferrer"

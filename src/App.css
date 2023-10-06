@@ -57,9 +57,28 @@ p{
 
 
 
-.app{
-  background-color: var(--clr-background);
+.overlay2{
+background-color: #201E20;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
+
+.overlay {
+  background-image: url('./giphy.gif');
+  opacity: 0.015;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 90%;
+  height: 1300px;
+  position: fixed;
+  left: 5%;
+
+  z-index: 2;
+}
+
+
 
 .relative{
   position: relative;
@@ -107,6 +126,7 @@ p{
 .navbar h1 {
   margin: 0;
   padding: 0 15px; 
+  font-size: 1.1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -154,7 +174,9 @@ padding: 300px;
 
 .welcome {
   padding: 200px 300px;
+
 }
+
 
 .floating-div {
   opacity: 0; /* Start with zero opacity */
@@ -476,14 +498,15 @@ li{
 
 
 .sent-message,
-.contact-container h2,
-.contact-container h1{
+.contact h2,
+.contact h1{
   text-align: center;
 }
 
-.contact-container h2{
+.contact h2{
   padding-bottom:40px;
-  font-size: 3em;
+  font-size: 2.4em;
+  color:var(--clr-beige);
 }
 
 .contact-label {

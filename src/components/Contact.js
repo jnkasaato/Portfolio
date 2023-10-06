@@ -30,17 +30,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form data here
     console.log('Form submitted:', {
       Name,
       email,
       message,
     });
-    // Reset form fields after submission
     setName('');
     setEmail('');
     setMessage('');
-    // Set the isSubmitted state to true
     setIsSubmitted(true);
   };
 
@@ -48,9 +45,11 @@ const Contact = () => {
     <div  className="contact"  style={{position:"relative"}}>
           
       <div id="contact"></div>
+      <h1>Say hi</h1>
+      <h2>Get In Touch</h2>
+      
       <div ref={welcomeDivRef} className="contact-container floating-div">
-        <h1>Say hi</h1>
-        <h2>Get In Touch</h2>
+        
         {isSubmitted ? (
           <div className="sent-message">
             <h4>Message Sent! Thanks for reaching out!</h4>
