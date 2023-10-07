@@ -24,13 +24,16 @@ function App() {
   }, []);
 
   return (
-    <div className='app'>
-      <Overlay/>
+<div>
+    <Overlay/>
       <Overlay2/>
+    <div className='app'>
+      
         <Navbar scrolling={scrolling} />
         <Welcome/>
         <Projects/>
         <Contact/>
+    </div>
     </div>
   );
 }

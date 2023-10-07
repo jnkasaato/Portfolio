@@ -4,7 +4,7 @@
     "id": 1,
     "name": "Decentralized Ecomerce 2.0",
     "finder":"juniper",
-    "description": "This app is a decentralized e-commerce platform that allows users to purchase items using Ethereum cryptocurrency. It provides a seamless shopping experience with secure transactions on the blockchain..",
+    "description": "This app is a decentralized e-commerce platform that allows users to purchase items using Ethereum cryptocurrency. It provides a seamless shopping experience with secure transactions on the blockchain.",
     "tech": "SOLIDITY  ETHERS.JS  HARDHAT  REACT",
     "side": "odd",
     "site": "https://juniper.jordananamutebi.com/",
