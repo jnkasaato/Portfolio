@@ -39,14 +39,6 @@ function Navbar({ scrolling }) {
         <Link to="contact" smooth={true} duration={2000} offset={-100}>
           <h1>Contact</h1>
         </Link>
-        <a
-          href="https://drive.google.com/file/d/1I_alJc18fl4Cg_34raEZbl6BUMeuFFLv/view?usp=sharing"
-          target="_blank"
-          className="icons"
-          rel="noopener noreferrer"
-        >
-          <h1>Resume</h1>
-        </a>
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ function Projects() {
 				</div>
 				<div ref = {reference2} className="floating-div">
 				{myProjects.projects.map ((project) => (
-					<div className="project relative" >
+					<div className={`project relative project-${project.side}`} >
 						<div className={`project-image ${project.side}-img relative `}>
 							<img src={`/${project.finder}.jpg`} alt="ecommerce" />
 							<div className="overlay project-cover">
