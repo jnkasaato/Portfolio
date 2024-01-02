@@ -39,16 +39,6 @@
     "side": "even",
     "site": "https://happytail.jordananamutebi.com/",
     "code": "https://github.com/jnkasaato/petAdoption"
-  },
-  {
-    "id": 5,
-    "name": "Decentralized Ecommerce",
-    "finder":"ecommerce",
-    "description": "Acclimate is a decentrlalized ecomerce site where you can explore and buy anything you want in the same way you would on a centralized platform.",
-    "tech": "SOLIDITY  ETHERS.JS  HARDHAT  REACT",
-    "side": "odd",
-    "site": "https://acclimate.jordananamutebi.com/",
-    "code": "https://github.com/jnkasaato/ecommerce/"
   }
  ]
 }
