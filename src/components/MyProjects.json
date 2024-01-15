@@ -1,0 +1,46 @@
+{
+"projects": [
+    {
+    "id": 1,
+    "name": "Decentralized Ecomerce 2.0",
+    "finder":"juniper",
+    "description": "A decentralized e-commerce platform that allows users to purchase items using Ethereum cryptocurrency. It provides a seamless shopping experience with secure transactions on the blockchain.",
+    "tech": "SOLIDITY  ETHERS.JS  HARDHAT  REACT",
+    "side": "odd",
+    "site": "https://juniper.jordananamutebi.com/",
+    "code": "https://github.com/jnkasaato/juniper/"
+  },
+  {
+    "id": 2,
+    "name": "Financial Planner",
+    "finder":"finance",
+    "description": "A personal finance tracker designed to help users manage their expenses and savings. It offers features such as visualizing spending patterns, setting spending limits, and categorizing transactions to promote better financial planning.",
+    "tech": "JAVASCRIPT REACT  CSS HTML",
+    "side": "even",
+    "site": "https://financialplanner.jordananamutebi.com/",
+    "code": "https://github.com/jnkasaato/financial-planner"
+  },
+  {
+    "id": 3,
+    "name": "Decentralized Token Exchange",
+    "finder": "tokenexchange",
+    "description": "A decentralized token exchange where you can transfer real world currency with a synthisized dApp token. You can deposit, withdraw, make and cancel orders, and access the ordering book all in one simple site.",
+    "tech": "SOLIDITY  ETHERS.JS  HARDHAT  REACT",
+    "side": "odd",
+    "site": "https://seedling.jordananamutebi.com/",
+    "code": "https://github.com/jnkasaato/coin-exchange"
+  },
+  {
+    "id": 4,
+    "name": "Pet Adoption Site",
+    "finder":"adopt",
+    "description": "A compassionate platform that facilitates pet adoptions, fosters loving connections between families and animals, and promotes responsible pet ownership, creating a brighter future for our furry companions.",
+    "tech": "JAVASCRIPT REACT CSS HTML",
+    "side": "even",
+    "site": "https://happytail.jordananamutebi.com/",
+    "code": "https://github.com/jnkasaato/petAdoption"
+  }
+ ]
+}
+
+
