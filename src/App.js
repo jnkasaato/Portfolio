@@ -24,29 +24,15 @@ function App() {
   }, []);
 
   return (
-<div>
-    <Overlay/>
+    <div>
+      <Overlay/>
       <Overlay2/>
-    <div className='app'>
-      
+      <div className='app'>
         <Navbar scrolling={scrolling} />
-    <div className='decor'>
-      <div className='decor1'>
-        <div className=' line1'></div>
-        <img src='/react.png'/>
-        <img src='/js.png'/>
-        <img src='/html.png'/>
-        <img src='/css.png'/>
-      </div>
-      <div className=' decor2'>
-       <h1> jordananamutebi.com</h1>
-       <div className='line2'></div>
-    </div>
-    </div>
         <Welcome/>
         <Projects/>
         <Contact/>
-    </div>
+      </div>
     </div>
   );
 }

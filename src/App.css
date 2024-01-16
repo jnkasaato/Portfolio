@@ -21,7 +21,7 @@ h1{
   color: var(--clr-accent);
   font-size: 1.2em;
   font-family: 'IBM Plex Mono', monospace;
-  font-weight:400;
+  font-weight:600;
 }
 
 h2{
@@ -40,12 +40,15 @@ h4{
   color:var(--clr-white);
   font-size: 1.5em;
   font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+
 }
 
 h5{
   color:var(--clr-white);
   font-size: 1.3em;
   font-family: 'Poppins', sans-serif;
+
 }
 
 p{
@@ -59,7 +62,7 @@ p{
 
 
 .overlay2{
-  background-image: linear-gradient(to bottom right, #272838, #1d1f33);
+  background-image: linear-gradient(to bottom right, #03255c, #1d1f33);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -72,7 +75,8 @@ p{
 
 .overlay1 {
   background-image: url('./giphy.gif');
-  opacity: 0.01;
+  opacity: 0.5;
+  mask-image: linear-gradient(to right , transparent, rgba(0, 0, 0, 0.08) 30%, rgba(0, 0, 0, 0.08) 30%, transparent);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -109,13 +113,12 @@ p{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
- 
   z-index: 100;
   padding-bottom: 20px;
   padding-top: 50px;
-
-
 }
+
+
 
 .navbar__links h1{
   padding: 0 20px;
@@ -150,7 +153,7 @@ p{
 
 .navbar h1 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   padding:0;
    font-size: .9em;
    margin-right: 20px;
@@ -164,72 +167,7 @@ p{
   .navbar {
     display:none;
   }
-
-
 }
-
-/* --------------------------------------------------------------------------------------------- */
-
-/* Decor */
-
-.decor1{
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left:50px;
-  top: 120px;
-}
-
-.decor1 img{
-  height: 18px;
-  width: 18px;
-  object-fit: cover;
-  padding: 10px 0;
-}
-
-.line2,
-.line1 {
-  width: 1px;
-  height: 200px;
-  background-color: var(--clr-accent);
-  margin: 10px 0;
-}
-
-
-.line1 {
-  width: 1px;
-  height: 20px;
-  background-color: var(--clr-accent);
-  margin: 10px 0;
-}
-
-
-.decor2 {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  right:0;
-  bottom: -70px;
-}
-
-.decor2 h1{
-  transform: rotate(90deg);
-  font-size: .9em;
-  font-weight: 400;
-  font-color: #afcbd5;
-  margin: 80px 0;
-}
-
-@media only screen and (max-width: 1350px) {
-  .decor1,
-  .decor2{
-    display:none;
-  }
-}
-
-
 
 
 /* --------------------------------------------------------------------------------------------- */
@@ -312,7 +250,7 @@ li{
 
 @media only screen and (max-width: 800px) {
   h1, h2, h3, h4, h5 {
-    font-size: 1.4em; 
+    font-size: 1.1em; 
     margin:0;
     padding:0;
     text-align: left;
@@ -329,13 +267,8 @@ li{
     font-size: 2em;
   }
 
-    h5{
-    font-size: 1.1em;
-  }
-
-  h4{
-    text-transform: uppercase;
-    font-size: 1.1em; 
+  h3{
+    font-size: 1.4em;
   }
 
   .welcome,
@@ -439,7 +372,9 @@ li{
   box-shadow: 2px 2px 10px 1px #00000050;
 }
 
-
+.project-odd{
+  text-align: right;
+}
 
 
 .project-info h1,
@@ -448,11 +383,6 @@ li{
   font-weight: 500;
   letter-spacing: 5px;
 }
-
-
-
-
-
 
 .tech {
   color: var(--clr-light);
@@ -471,7 +401,7 @@ li{
   letter-spacing: 5px;
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1200px) {
   .project-cover,
   .project-image img,
   .even-img {
@@ -570,8 +500,11 @@ li{
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
+    padding: 20px 0 100px 0;
+    margin:0 ;
   }
-  .project:hover{
+
+  .project hover{
     box-shadow:none;
     border: none;
     background-color: none;
@@ -680,7 +613,6 @@ li{
   .contact h2{
     font-size: 2em;
   }
-
 
 }
 

@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <div  className="contact" ref={welcomeDivRef} style={{position:"relative"}}>
       <div id="contact"></div>
-      <h1>0.3 Say hi</h1>
+      <h1> Say hi</h1>
       <h2>Let's Chat</h2>
       <a href="mailto:jordanakasaato@gmail.com">Send Email</a>
     </div>
