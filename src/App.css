@@ -504,7 +504,7 @@ li{
     margin:0 ;
   }
 
-  .project hover{
+  .project:hover{
     box-shadow:none;
     border: none;
     background-color: none;
