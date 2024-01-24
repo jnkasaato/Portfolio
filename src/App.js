@@ -4,8 +4,7 @@ import Navbar from './components/Navbar'
 import Welcome from './components/Welcome'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import Overlay from './components/Overlay'
-import Overlay2 from './components/Overlay2'
+
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -25,8 +24,8 @@ function App() {
 
   return (
     <div>
-      <Overlay/>
-      <Overlay2/>
+      <div className="overlay1"></div>
+      <div className="overlay2"></div>
       <div className='app'>
         <Navbar scrolling={scrolling} />
         <Welcome/>
