@@ -29,16 +29,6 @@
     "side": "odd",
     "site": "https://seedling.jordananamutebi.com/",
     "code": "https://github.com/jnkasaato/coin-exchange"
-  },
-  {
-    "id": 4,
-    "name": "Pet Adoption Site",
-    "finder":"adopt",
-    "description": "A compassionate platform that facilitates pet adoptions, fosters loving connections between families and animals, and promotes responsible pet ownership, creating a brighter future for our furry companions.",
-    "tech": "JAVASCRIPT REACT CSS HTML",
-    "side": "even",
-    "site": "https://happytail.jordananamutebi.com/",
-    "code": "https://github.com/jnkasaato/petAdoption"
   }
  ]
 }

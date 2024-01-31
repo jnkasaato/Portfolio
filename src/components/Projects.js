@@ -6,14 +6,12 @@ function Projects() {
   const floatIn2 = useRef(null);
   const floatIn3 = useRef(null);
   const floatIn4 = useRef(null);
-  const floatIn5 = useRef(null);
 
     useEffect(() => {
         applyFloatInAnimation(floatIn1);
         applyFloatInAnimation(floatIn2);
         applyFloatInAnimation(floatIn3);
         applyFloatInAnimation(floatIn4);
-        applyFloatInAnimation(floatIn5);
     }, []);
 
   const applyFloatInAnimation = (divRef) => {
@@ -31,7 +29,7 @@ function Projects() {
     };
   };
 
-  const floatRef = [ floatIn1, floatIn2, floatIn3, floatIn4, floatIn5]
+  const floatRef = [ floatIn1, floatIn2, floatIn3, floatIn4]
 
 	return (
 		<div className='projects-container'  >
